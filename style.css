@@ -284,10 +284,6 @@ body {
 
 /*formação acadêmica */
 
-.academic__courses__box {
-    margin-bottom: 20px;
-}
-
 .academic {
     padding: 0px;
     margin-top: 200px;
@@ -317,7 +313,7 @@ body {
 
 .academic__courses__item__img img {
     height: auto;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 5px;
 }
 
@@ -442,64 +438,206 @@ body {
 
 /* Media Queries */
 
-@media (min-width: 734px){
-    #contato__separado {
-        display: none;
+/* Estilos para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .title {
+        margin: 0;
+        padding: 20px;
     }
-}
-/* para celulares e tablets */
-@media (max-width: 734px) {
+
+    .title__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .title__profile {
+        padding: 50px;
+        position: absolute;
+        top: 90px;
+        left: 239px;
+        z-index: 1;
+        padding: 0px 0px 0px 170px;
+    }
+
+    .title__profile img {
+        width: 0; 
+        height: auto;
+    }
+    
+    .title__bio,
+    .title__subsection,
+    .title__network {
+        margin-top: 0px;
+        flex: 1 1 auto;
+        max-width: calc(70% - 40px);
+    }
+    
+    .title__network {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+        display: flex;
+    }
+    
+    .title__network__item {
+        flex: 0 0 auto;
+        margin-right: 10px;
+    }
+
     .menu__list__item {
         display: none;
     }
 
-    #contato__separado {
-        display: block;
+    .about {
+        margin-top: 900px;
+    }
+    .contato {
+        display: inline;
     }
 
-    .title__profile {
-        margin: 0 auto;
+    .skills__box,
+    .hobbies__box {
+        flex-basis: calc(33.3333% - 10px);
+        margin-right: 10px;
+    }
+
+    .experience__img {
+        width: 100%; 
+        max-width: 2760px;
+    }
+
+    .experiencie__box {
         padding: 0;
         display: block;
         position: relative;
         top: 0; 
         left: 0; 
+        width: 100%;
+        margin-bottom: 10px;  
+    }
+    
+}
+
+
+/* para celulares */
+@media (max-width: 524px) {
+    .menu__list__item {
+        display: none;
+    }
+
+    .contato {
+        display: inline;
+    }
+
+    .title__profile {
+        display: block;
+        position: relative;
+        top: 15px; 
+        left: 0; 
         width: 100%; 
-        max-width: 400px; 
-        margin-bottom: 0px; 
-        margin-left: 20px;
+        max-width: 300px;
+        margin: 0;
+    }
+
+    img.title__profile {
+        display: block;
+        margin: 2px;
+        padding: 0px;
+        width: 100%; 
+    }
+
+    .title__container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
 
     .title__bio,
     .title__subsection,
     .title__network {
-        text-align: center; 
+        margin-top: 0px;
+        flex: 1 1 auto;
+        max-width: calc(80% - 40px);
     }
 
     .title__bio {
         margin-top: 5px;
     }
 
-    .title__destaque{
+    .title__destaque {
         margin-top: 100px;
+    }
+
+    .title__network__item a {
+        margin-bottom: 4px;
+        width: 180px;
     }
 
     .about {
         padding: 0px;
-        margin-top: 1300px;
+        margin: 1270px 0 0px 0px; 
     }
 
-    .experiencie__box{
-        margin: 0 auto;
+    .skills {
+        padding: 20px;
+        margin: 0px 0 10px 0; 
+    }
+
+    .skills__box {
+        flex: 1 1 45%;
+    }
+
+    .hobbies {
+        padding: 20px;
+        margin: 0 0 10px 0;
+    }
+
+    .hobbies__box {
+        flex: 1 1 45%;
+    }
+
+    .academic {
+        padding: 0px;
+        margin: 0 0 10px 0; 
+    }
+
+    .academic__courses {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .academic__courses__box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .academic__courses__list {
+        width: 100%;
+    }
+
+    .experience {
+        padding: 20px;
+        margin: 0 0 10px 0; 
+    }
+
+    .experience__img {
+        width: 100%; 
+        max-width: 2760px;
+    }
+
+    .experiencie__box {
         padding: 0;
         display: block;
         position: relative;
         top: 0; 
         left: 0; 
-        width: 100%; 
-        max-width: 600px; 
-        margin-bottom: 10px; 
+        width: 100%;
+        margin-bottom: 10px;  
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 10px;
     }
 }
-
-
